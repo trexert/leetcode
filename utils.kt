@@ -1,5 +1,5 @@
 fun gcd(a: Int, b: Int): Int {
-    val (a, b) = (Math.max(a, b), Math.min(a, b))
+    var (a, b) = Pair(a.coerceAtLeast(b), b.coerceAtMost(a))
     while (b != 0) {
         val rem = a % b
         a = b
